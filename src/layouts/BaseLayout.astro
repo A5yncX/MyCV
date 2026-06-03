@@ -1,0 +1,58 @@
+---
+import "../styles/cv.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+  theme: {
+    fontFamily: string;
+    fontSize: string;
+    lineHeight: string;
+    margin: string;
+    marginTop?: string;
+    pageWidth: string;
+    pageMinHeight: string;
+    colorText: string;
+    colorPrimary: string;
+    colorBackground: string;
+  };
+}
+
+const {
+  title = "CV",
+  description = "AsyncX 的个人简历，内容由 JSON 数据驱动，便于维护与更新。",
+  theme,
+} = Astro.props;
+
+const themeStyle = [
+  `--font-family: ${theme.fontFamily}`,
+  `--font-size: ${theme.fontSize}`,
+  `--line-height: ${theme.lineHeight}`,
+  `--margin: ${theme.margin}`,
+  `--margin-top: ${theme.marginTop ?? theme.margin}`,
+  `--page-width: ${theme.pageWidth}`,
+  `--page-min-height: ${theme.pageMinHeight}`,
+  `--color-text: ${theme.colorText}`,
+  `--color-primary: ${theme.colorPrimary}`,
+  `--color-background: ${theme.colorBackground}`,
+].join("; ");
+---
+
+<!doctype html>
+<html lang="zh-CN" style={themeStyle}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

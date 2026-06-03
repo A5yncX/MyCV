@@ -1,0 +1,14 @@
+{
+  "default": {
+    "fontFamily": "\"Noto Sans SC\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+    "fontSize": "13.75px",
+    "lineHeight": "1.3",
+    "margin": "28px",
+    "marginTop": "14px",
+    "pageWidth": "210mm",
+    "pageMinHeight": "297mm",
+    "colorText": "#000000",
+    "colorPrimary": "#dc2626",
+    "colorBackground": "#ffffff"
+  }
+}

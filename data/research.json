@@ -1,0 +1,44 @@
+[
+  {
+    "id": "multimodal-research",
+    "organization": "基于多模态人物行为的异构决策研究",
+    "position": "算法/数据模型研究",
+    "startDate": "2022/05",
+    "endDate": "2022/09",
+    "highlights": [
+      {
+        "id": "data-viz",
+        "text": "获取模拟的个体数据，使用Python/MATLAB进行数据可视化，利用NetLogo进行模型迭代和流程可视化。"
+      },
+      {
+        "id": "model-iteration",
+        "text": "首次接触NetLogo语言，熟悉3天后开发首个模型并进行迭代，到交接时约迭代20+版本。"
+      },
+      {
+        "id": "research-tooling",
+        "text": "掌握各种研究工具(Zotero,LaTeX)提高效率，有开发专有工具管理论文数据和进行版本控制工作流程的经验。"
+      }
+    ]
+  },
+  {
+    "id": "nlp-research",
+    "organization": "基于 NLP 的电子病历 ICD 编码自动预测",
+    "position": "数据模型搭建",
+    "startDate": "2024/09",
+    "endDate": "2025/01",
+    "highlights": [
+      {
+        "id": "ehr-icd-goal",
+        "text": "对比 BERT-FFNN/BioBERT-FFNN/Naive Bayes, 针对EHR中非结构化临床文本，采用 Automated Medical Coding（AMC）进行 ICD 编码多标签分类，将非结构化病历转化为结构化编码，提升编码准确性与效率。"
+      },
+      {
+        "id": "mimic-preprocessing",
+        "text": "使用MIMIC-IV的随机20万条临床文本完成数据处理, 基于Top10高频ICD编码构建多标签数据集。"
+      },
+      {
+        "id": "grade",
+        "text": "教授/助教/组间互评均满分(80/80)"
+      }
+    ]
+  }
+]

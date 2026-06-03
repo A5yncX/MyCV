@@ -1,0 +1,17 @@
+[
+  { "id": "python", "name": "Python", "level": "熟练", "rating": 4 },
+  { "id": "java", "name": "Java", "level": "熟练", "rating": 4 },
+  { "id": "html-js-css", "name": "HTML/JS/CSS", "level": "熟练", "rating": 4 },
+  { "id": "sql", "name": "SQL", "level": "熟练", "rating": 4 },
+  { "id": "excel", "name": "Excel", "level": "熟练", "rating": 4 },
+  { "id": "pm", "name": "项目管理", "level": "了解", "rating": 2 },
+  { "id": "vue", "name": "Vue", "level": "熟悉", "rating": 3 },
+  { "id": "astro", "name": "Astro", "level": "熟练", "rating": 4 },
+  { "id": "git", "name": "Git", "level": "熟练", "rating": 4 },
+  { "id": "docker", "name": "Docker", "level": "熟悉", "rating": 3 },
+  { "id": "PyTorch", "name": "PyTorch", "level": "熟悉", "rating": 3 },
+  { "id": "Scikit-learn", "name": "Scikit-learn", "level": "熟悉", "rating": 3 },
+  { "id": "Pandas", "name": "Pandas", "level": "熟悉", "rating": 3 },
+  { "id": "NumPy", "name": "NumPy", "level": "熟悉", "rating": 3 },
+  { "id": "Matplotlib", "name": "Matplotlib", "level": "熟悉", "rating": 3 }
+]

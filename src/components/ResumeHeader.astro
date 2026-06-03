@@ -1,0 +1,64 @@
+---
+interface Props {
+  basics: {
+    name: string;
+    headline?: string;
+    gender?: string;
+    age?: number;
+    education?: string;
+    location?: string;
+    phone?: string;
+    email?: string;
+    url?: string;
+    languages?: string;
+  };
+}
+
+const { basics } = Astro.props;
+
+const infoItems = [
+  { kind: "text", value: basics.gender },
+  { kind: "text", value: basics.age != null ? `${basics.age}岁` : undefined },
+  { kind: "text", value: basics.education },
+  { kind: "text", value: basics.location },
+  { kind: "text", value: basics.phone },
+  { kind: "email", value: basics.email },
+  { kind: "text", value: basics.languages },
+  { kind: "url", value: basics.url },
+].filter((item) => item.value);
+---
+
+<header class="header">
+  <div class="header-main">
+    <div class="name">{basics.name}</div>
+    {basics.headline && <div class="headline">{basics.headline}</div>}
+    {
+      infoItems.length > 0 && (
+        <div class="meta-row">
+          {infoItems.map((item) => (
+            <div class="meta-item">
+              {
+                item.kind === "email" ? (
+                  <a href={`mailto:${item.value}`} target="_blank" rel="noreferrer">
+                    {item.value}
+                  </a>
+                ) : item.kind === "url" ? (
+                  <a
+                    href={item.value}
+                    target="_blank"
+                    rel="noreferrer noopener nofollow"
+                    class="entry-link"
+                  >
+                    {item.value}
+                  </a>
+                ) : (
+                  item.value
+                )
+              }
+            </div>
+          ))}
+        </div>
+      )
+    }
+  </div>
+</header>

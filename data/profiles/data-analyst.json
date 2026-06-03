@@ -1,0 +1,58 @@
+{
+  "id": "data-analyst",
+  "slug": "data-analyst",
+  "label": "数据分析",
+  "pageTitle": "CV · 数据分析",
+  "pageDescription": "郝泳棋 · 数据分析方向简历",
+  "basics": {
+    "ref": "default"
+  },
+  "theme": "default",
+  "sections": [
+    {
+      "type": "education",
+      "title": "教育经历",
+      "items": ["hnu-cs","cu"],
+      "pick": {
+        "hnu-cs": {
+          "highlights": ["math-modeling-national", "math-challenge", "mcm-ms"]
+        },
+        "cu": {
+          "highlights": ["nlp", "cv"]
+        }
+      }
+    },
+    {
+      "type": "internships",
+      "title": "实习经历",
+      "items": ["edtech-intern", "opensource"],
+      "pick": {
+        "edtech-intern": {
+          "highlights": ["fullstack-viz", "scrapy-pipeline", "efficiency-top1"]
+        },
+        "opensource": {
+          "highlights": ["docsify-theme-darcula", "notion-to-beancount", "garmin2openclaw"]
+        }
+      }
+    },
+    {
+      "type": "research",
+      "title": "学术经历",
+      "items": ["multimodal-research", "nlp-research"],
+      "pick": {
+        "multimodal-research": {
+          "highlights": ["data-viz", "model-iteration", "research-tooling"]
+        },
+        "nlp-research": {
+          "highlights": ["ehr-icd-goal", "mimic-preprocessing", "bert-biobert-nb"]
+        }
+      }
+    },
+    {
+      "type": "skills",
+      "title": "个人技能",
+      "columns": 8,
+      "items": ["python", "sql", "excel", "vue", "astro", "docker", "PyTorch", "Scikit-learn", "Pandas", "NumPy", "Matplotlib"]
+    }
+  ]
+}

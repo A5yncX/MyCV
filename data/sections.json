@@ -1,0 +1,38 @@
+{
+  "education": {
+    "source": "education.json",
+    "kind": "timeline",
+    "defaultTitle": "教育经历",
+    "defaultColumns": 1
+  },
+  "internships": {
+    "source": "internships.json",
+    "kind": "timeline-bullets",
+    "defaultTitle": "实习经历",
+    "defaultColumns": 1
+  },
+  "research": {
+    "source": "research.json",
+    "kind": "timeline-bullets",
+    "defaultTitle": "学术经历",
+    "defaultColumns": 1
+  },
+  "projects": {
+    "source": "projects.json",
+    "kind": "projects",
+    "defaultTitle": "项目经验",
+    "defaultColumns": 3
+  },
+  "skills": {
+    "source": "skills.json",
+    "kind": "skills",
+    "defaultTitle": "技能",
+    "defaultColumns": 5
+  },
+  "languages": {
+    "source": "languages.json",
+    "kind": "languages",
+    "defaultTitle": "语言",
+    "defaultColumns": 1
+  }
+}

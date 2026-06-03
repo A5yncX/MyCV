@@ -1,0 +1,53 @@
+{
+  "id": "software-dev",
+  "slug": "software-dev",
+  "label": "软件开发",
+  "pageTitle": "CV · 软件开发",
+  "pageDescription": "郝泳棋 · Python / SQL / Java 开发方向简历",
+  "basics": {
+    "ref": "default",
+    "overrides": {
+      "headline": "软件开发 · Python / SQL / Java"
+    }
+  },
+  "theme": "default",
+  "sections": [
+    {
+      "type": "education",
+      "items": ["bnu-cs"],
+      "pick": {
+        "bnu-cs": {
+          "highlights": ["math-modeling-national", "mcm-ms"]
+        }
+      }
+    },
+    {
+      "type": "internships",
+      "items": ["edtech-intern", "net-tech-intern"],
+      "pick": {
+        "edtech-intern": {
+          "highlights": ["fullstack-viz", "scrapy-pipeline", "efficiency-top1", "vue-cicd"]
+        },
+        "net-tech-intern": {
+          "highlights": ["lifecycle-python", "deploy-efficiency", "git-docker"]
+        }
+      }
+    },
+    {
+      "type": "projects",
+      "title": "项目经验",
+      "columns": 3,
+      "items": ["personal-site", "oss-maintain", "notion-beancount"]
+    },
+    {
+      "type": "skills",
+      "title": "开发技能",
+      "columns": 5,
+      "items": ["python", "java", "sql", "html-js-css", "pm"]
+    },
+    {
+      "type": "languages",
+      "items": ["english"]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+---
+interface Props {
+  rating: number;
+  max?: number;
+}
+
+const { rating, max = 5 } = Astro.props;
+---
+
+<div class="rating-row">
+  {
+    Array.from({ length: max }, (_, index) => (
+      <div class:list={["rating-dot", { filled: index < rating }]} />
+    ))
+  }
+</div>

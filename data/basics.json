@@ -1,0 +1,13 @@
+{
+  "default": {
+    "name": "郝泳棋",
+    "headline": "",
+    "gender": "男",
+    "age": 24,
+    "education": "计算机科学硕士学位",
+    "location": "苏州",
+    "phone": "15560221357",
+    "email": "contact@asyncx.cc",
+    "languages": "PTE-Academic: 60分,具备工作/生活英文交流能力/写作能力"
+  }
+}

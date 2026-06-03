@@ -1,0 +1,370 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+}
+
+html {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: #f4f4f5;
+  color: #09090b;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.875rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+h4,
+p,
+ul {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.page-shell {
+  width: var(--page-width, 210mm);
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+}
+
+.cv-page {
+  position: relative;
+  background: var(--color-background, #ffffff);
+  width: 100%;
+  min-height: var(--page-min-height, auto);
+  font-family: var(
+    --font-family,
+    "Noto Sans SC",
+    "PingFang SC",
+    "Microsoft YaHei",
+    sans-serif
+  );
+  font-size: var(--font-size, 13.75px);
+  line-height: var(--line-height, 1.3);
+  color: var(--color-text, #000000);
+}
+
+.cv-content {
+  padding: var(--margin-top, var(--margin, 34px)) var(--margin, 34px)
+    var(--margin, 34px);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.name {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+.headline {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 0.5rem;
+  row-gap: 0.125rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  border-right: 1px solid currentColor;
+  padding-right: 0.5rem;
+}
+
+.meta-item:last-child {
+  border-right: 0;
+  padding-right: 0;
+}
+
+.contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 0.5rem;
+  row-gap: 0.125rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  column-gap: 0.375rem;
+  border-right: 1px solid currentColor;
+  padding-right: 0.5rem;
+}
+
+.contact-item:last-child {
+  border-right: 0;
+  padding-right: 0;
+}
+
+.section {
+  display: grid;
+}
+
+.section-title {
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.125rem;
+  border-bottom: 1px solid currentColor;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+}
+
+.section-grid {
+  display: grid;
+  column-gap: 1.5rem;
+  row-gap: 0.75rem;
+}
+
+.entry {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.entry-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.entry-left {
+  text-align: left;
+}
+
+.entry-right {
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.entry-title {
+  font-weight: 700;
+}
+
+.entry-link {
+  display: inline-block;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.wysiwyg p {
+  margin: 0 0 0.5rem;
+  line-height: var(--line-height, 1.3);
+}
+
+.wysiwyg p:last-child {
+  margin-bottom: 0;
+}
+
+.wysiwyg ul {
+  margin: 0;
+  padding-left: 1.625em;
+  list-style: disc;
+}
+
+.wysiwyg li {
+  margin: 0 0 0.5rem;
+  line-height: var(--line-height, 1.3);
+}
+
+.wysiwyg li:last-child {
+  margin-bottom: 0;
+}
+
+.rating-row {
+  display: flex;
+  align-items: center;
+  column-gap: 0.375rem;
+}
+
+.rating-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  border: 1px solid var(--color-primary, #dc2626);
+}
+
+.rating-dot.filled {
+  background-color: var(--color-primary, #dc2626);
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.4rem;
+}
+
+.skill-tag {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.15rem;
+  padding: 0.125rem 0.5rem;
+  border-radius: 2px;
+  background: rgb(40 42 53 / 30%);
+  border: 1px solid rgb(40 42 53 / 30%);
+  font-size: 0.8125rem;
+  line-height: 1.35;
+  white-space: nowrap;
+}
+
+.skill-name {
+  font-weight: 600;
+}
+
+.skill-level {
+  font-size: 0.6875rem;
+  opacity: 0.72;
+}
+
+.skill-level::before {
+  content: "·";
+  margin: 0 0.15rem;
+}
+
+.language-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+@page {
+  size: A4 portrait;
+  margin: 0;
+}
+
+@media print {
+  html,
+  body {
+    width: auto;
+    height: auto;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-family: var(
+      --font-family,
+      "Noto Sans SC",
+      "PingFang SC",
+      "Microsoft YaHei",
+      sans-serif
+    ) !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page-shell {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .cv-page {
+    width: 100% !important;
+    min-height: auto !important;
+    height: auto !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-family: inherit !important;
+    font-size: var(--font-size, 13.75px) !important;
+    line-height: var(--line-height, 1.3) !important;
+  }
+
+  .cv-content {
+    display: block !important;
+    padding: var(--margin-top, 14px) var(--margin, 28px) 22px !important;
+  }
+
+  .cv-content > * + * {
+    margin-top: 0.625rem !important;
+  }
+
+  .section-title {
+    margin-bottom: 0.35rem !important;
+  }
+
+  .header,
+  .section,
+  .entry {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .section-grid {
+    display: grid !important;
+    row-gap: 0.5rem !important;
+  }
+
+  .skills-list {
+    display: flex !important;
+    flex-wrap: wrap !important;
+  }
+
+  .skill-tag {
+    background: rgb(40 42 53 / 30%) !important;
+    border-color: rgb(40 42 53 / 30%) !important;
+  }
+
+  .entry-header {
+    display: flex !important;
+  }
+
+  .rating-row {
+    display: flex !important;
+  }
+
+  .rating-dot {
+    border-color: #dc2626 !important;
+  }
+
+  .rating-dot.filled {
+    background-color: #dc2626 !important;
+  }
+
+  a {
+    color: #000000 !important;
+  }
+}

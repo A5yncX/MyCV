@@ -1,0 +1,44 @@
+[
+  {
+    "id": "hnu-cs",
+    "institution": "河南师范大学",
+    "area": "计算机科学与技术",
+    "score": "CGPA: 4.8/5.0",
+    "startDate": "2019/09",
+    "endDate": "2023/07",
+    "studyType": "学士学位",
+    "highlights": [
+      {
+        "id": "math-modeling-national",
+        "text": "中国\"高教社杯\"数学建模国赛三等奖"
+      },
+      {
+        "id": "math-challenge",
+        "text": "中国数学建模挑战赛全国第一阶段一等奖/第二阶段三等奖"
+      },
+      {
+        "id": "mcm-ms",
+        "text": "美国数学建模MCM/ICM比赛M/S奖(国际一等)"
+      }
+    ]
+  },
+  {
+    "id": "cu",
+    "institution": "Concordia University",
+    "area": "计算机科学",
+    "score": "GPA: 3.2/4.0",
+    "startDate": "2024/09",
+    "endDate": "2026/06",
+    "studyType": "Master of Applied Computer Science",
+    "highlights": [
+      {
+        "id": "nlp",
+        "text": "NLP-3次研究报告满分, Final Project(基于自然语言处理技术自动预测ICD代码)80/80"
+      },
+      {
+        "id": "cv",
+        "text": "CV-全project满分, Final Project(通过迁移学习和GradCAM可解释性在PlantVillage上进行植物病害识别)79/80"
+      }
+    ]
+  }
+]

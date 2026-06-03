@@ -1,0 +1,14 @@
+---
+import ResumePage from "../components/ResumePage.astro";
+import { getProfileSlugs } from "../lib/resume.js";
+
+export function getStaticPaths() {
+  return getProfileSlugs().map((slug) => ({
+    params: { slug },
+  }));
+}
+
+const { slug } = Astro.params;
+---
+
+<ResumePage slug={slug} />

@@ -1,0 +1,176 @@
+---
+import { formatDateRange } from "../lib/resume.js";
+
+interface TimelineItem {
+  institution?: string;
+  area?: string;
+  score?: string;
+  startDate?: string;
+  endDate?: string;
+  studyType?: string;
+  company?: string;
+  position?: string;
+  organization?: string;
+  highlights?: string[];
+}
+
+interface ProjectItem {
+  name: string;
+  date: string;
+  url?: string;
+  description?: string;
+}
+
+interface SkillItem {
+  name: string;
+  level?: string;
+}
+
+interface LanguageItem {
+  name: string;
+  description: string;
+}
+
+interface Props {
+  section: {
+    type: string;
+    kind: string;
+    title: string;
+    columns: number;
+    items: unknown[];
+  };
+}
+
+const { section } = Astro.props;
+const gridStyle = `grid-template-columns: repeat(${section.columns}, minmax(0, 1fr));`;
+const items = section.items;
+---
+
+<section class="section" id={section.type}>
+  <h4 class="section-title">{section.title}</h4>
+  {
+    section.kind === "skills" ? (
+      <div class="skills-list">
+        {(items as SkillItem[]).map((item) => (
+          <span class="skill-tag">
+            <span class="skill-name">{item.name}</span>
+            {item.level && <span class="skill-level">{item.level}</span>}
+          </span>
+        ))}
+      </div>
+    ) : (
+      <div class="section-grid" style={gridStyle}>
+    {
+      section.kind === "timeline" &&
+        (items as TimelineItem[]).map((item) => (
+          <div class="entry">
+            <div class="entry-header">
+              <div class="entry-left">
+                <div class="entry-title">{item.institution}</div>
+                <div>{item.area}</div>
+                {item.score && <div>{item.score}</div>}
+              </div>
+              <div class="entry-right">
+                <div class="entry-title">
+                  {formatDateRange(item.startDate, item.endDate)}
+                </div>
+                {item.studyType && <div>{item.studyType}</div>}
+              </div>
+            </div>
+            {
+              item.highlights?.length ? (
+                <div class="wysiwyg">
+                  {item.highlights.map((highlight) => (
+                    <p>{highlight}</p>
+                  ))}
+                </div>
+              ) : null
+            }
+          </div>
+        ))
+    }
+
+    {
+      section.kind === "timeline-bullets" &&
+        (items as TimelineItem[]).map((item) => (
+          <div class="entry">
+            <div class="entry-header">
+              <div class="entry-left">
+                <div class="entry-title">{item.company ?? item.organization}</div>
+                <div>{item.position}</div>
+              </div>
+              <div class="entry-right">
+                <div class="entry-title">
+                  {formatDateRange(item.startDate, item.endDate)}
+                </div>
+              </div>
+            </div>
+            {
+              item.highlights?.length ? (
+                <div class="wysiwyg">
+                  <ul>
+                    {item.highlights.map((highlight) => (
+                      <li>
+                        <p>{highlight}</p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null
+            }
+          </div>
+        ))
+    }
+
+    {
+      section.kind === "projects" &&
+        (items as ProjectItem[]).map((item) => (
+          <div class="entry">
+            <div class="entry-header">
+              <div class="entry-left">
+                <div class="entry-title">{item.name}</div>
+              </div>
+              <div class="entry-right">
+                <div class="entry-title">{item.date}</div>
+              </div>
+            </div>
+            {
+              item.url && (
+                <div>
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    rel="noreferrer noopener nofollow"
+                    class="entry-link"
+                  >
+                    {item.url}
+                  </a>
+                </div>
+              )
+            }
+            {
+              item.description && (
+                <div class="wysiwyg">
+                  <p>{item.description}</p>
+                </div>
+              )
+            }
+          </div>
+        ))
+    }
+
+    {
+      section.kind === "languages" &&
+        (items as LanguageItem[]).map((item) => (
+          <div class="entry">
+            <div class="language-meta">
+              <div class="entry-title">{item.name}</div>
+              <div>{item.description}</div>
+            </div>
+          </div>
+        ))
+    }
+      </div>
+    )
+  }
+</section>

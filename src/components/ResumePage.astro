@@ -1,0 +1,30 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ResumeHeader from "../components/ResumeHeader.astro";
+import ResumeSection from "../components/ResumeSection.astro";
+import { buildResume } from "../lib/resume.js";
+
+interface Props {
+  slug: string;
+}
+
+const { slug } = Astro.props;
+const resume = buildResume(slug);
+---
+
+<BaseLayout
+  title={resume.pageTitle}
+  description={resume.pageDescription}
+  theme={resume.theme}
+>
+  <div class="page-shell">
+    <article class="cv-page">
+      <div class="cv-content">
+        <ResumeHeader basics={resume.basics} />
+        {resume.sections.map((section) => (
+          <ResumeSection section={section} />
+        ))}
+      </div>
+    </article>
+  </div>
+</BaseLayout>
