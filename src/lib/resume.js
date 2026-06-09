@@ -33,16 +33,27 @@ function normalizeHighlights(highlights, pickIds) {
   const isObjectFormat = typeof highlights[0] === "object";
 
   if (!isObjectFormat) {
-    return pickIds ? highlights.filter((_, index) => pickIds.includes(String(index))) : highlights;
+    const filtered = pickIds
+      ? highlights.filter((_, index) => pickIds.includes(String(index)))
+      : highlights;
+    return filtered.map((text) => ({ text }));
   }
 
   if (!pickIds) {
-    return highlights.map((item) => item.text);
+    return highlights.map((item) => ({
+      text: item.text,
+      url: item.url,
+      linkLabel: item.linkLabel,
+    }));
   }
 
   return highlights
     .filter((item) => pickIds.includes(item.id))
-    .map((item) => item.text);
+    .map((item) => ({
+      text: item.text,
+      url: item.url,
+      linkLabel: item.linkLabel,
+    }));
 }
 
 function applyPick(entry, pick) {

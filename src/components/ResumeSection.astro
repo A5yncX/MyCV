@@ -1,5 +1,12 @@
 ---
 import { formatDateRange } from "../lib/resume.js";
+import HighlightText from "./HighlightText.astro";
+
+interface Highlight {
+  text: string;
+  url?: string;
+  linkLabel?: string;
+}
 
 interface TimelineItem {
   institution?: string;
@@ -11,7 +18,7 @@ interface TimelineItem {
   company?: string;
   position?: string;
   organization?: string;
-  highlights?: string[];
+  highlights?: Highlight[];
 }
 
 interface ProjectItem {
@@ -81,7 +88,9 @@ const items = section.items;
               item.highlights?.length ? (
                 <div class="wysiwyg">
                   {item.highlights.map((highlight) => (
-                    <p>{highlight}</p>
+                    <p>
+                      <HighlightText highlight={highlight} />
+                    </p>
                   ))}
                 </div>
               ) : null
@@ -111,7 +120,9 @@ const items = section.items;
                   <ul>
                     {item.highlights.map((highlight) => (
                       <li>
-                        <p>{highlight}</p>
+                        <p>
+                          <HighlightText highlight={highlight} />
+                        </p>
                       </li>
                     ))}
                   </ul>

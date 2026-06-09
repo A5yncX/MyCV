@@ -27,20 +27,30 @@
   {
     "id": "opensource",
     "company": "开源相关",
-    "position": "维护者",
+    "position": "开源贡献者",
     "startDate": "至今",
     "highlights": [
       {
         "id": "docsify-theme-darcula",
-        "text": "docsify-theme-darcula主题维护者, 受前SpaceX工程师赞扬(Typescript/Vue/Docsify)"
+        "text": "docsify-theme-darcula主题贡献者, 受前SpaceX工程师赞扬(Typescript/Vue/Docsify)",
+        "url": "https://github.com/A5yncX/docsify-theme-darcula",
+        "linkLabel": "docsify-theme-darcula"
       },
       {
         "id": "notion-to-beancount",
-        "text": "Notion-to-Beancount维护者, 将Notion的Database数据库文件中转为Beancount需求的.bean文件格式(Python)"
+        "text": "A5yncX/Notion-to-Beancount, 将Notion的Database数据库文件中转为Beancount需求的.bean文件格式(Python)",
+        "url": "https://github.com/A5yncX/notion-to-beancount",
+        "linkLabel": "A5yncX/Notion-to-Beancount"
       },
       {
         "id": "garmin2openclaw",
-        "text": "Garmin2OpenClaw维护者, 读取Garmin穿戴设备的日常数据(心跳/睡眠/血氧)并让OpenClaw自动化分析, 为日常睡眠/运动提供建议(Python/Docker)"
+        "text": "A5yncX/Garmin2OpenClaw(Private), 读取Garmin穿戴设备的日常数据(心跳/睡眠/血氧)并让OpenClaw自动化分析, 为日常睡眠/运动提供建议(Python/Docker)"
+      },
+      {
+        "id": "this-cv-tool",
+        "text": "A5yncX/MyCV(Vibe Coding), 使用Astro制作简历的工具, 内容由JSON数据驱动(Astro)",
+        "url": "https://github.com/A5yncX/MyCV",
+        "linkLabel": "A5yncX/MyCV(Vibe Coding)"
       }
     ]
   }

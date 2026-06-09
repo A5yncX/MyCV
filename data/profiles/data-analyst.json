@@ -31,7 +31,7 @@
           "highlights": ["fullstack-viz", "scrapy-pipeline", "efficiency-top1"]
         },
         "opensource": {
-          "highlights": ["docsify-theme-darcula", "notion-to-beancount", "garmin2openclaw"]
+          "highlights": ["docsify-theme-darcula", "notion-to-beancount", "garmin2openclaw", "this-cv-tool"]
         }
       }
     },

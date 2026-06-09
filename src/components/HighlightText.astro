@@ -1,0 +1,46 @@
+---
+interface Props {
+  highlight:
+    | string
+    | {
+        text: string;
+        url?: string;
+        linkLabel?: string;
+      };
+}
+
+const { highlight } = Astro.props;
+const item = typeof highlight === "string" ? { text: highlight } : highlight;
+const { text, url, linkLabel } = item;
+const suffix =
+  url && linkLabel && text.startsWith(linkLabel)
+    ? text.slice(linkLabel.length)
+    : null;
+---
+
+{
+  url && linkLabel && suffix !== null ? (
+    <>
+      <a
+        href={url}
+        target="_blank"
+        rel="noreferrer noopener nofollow"
+        class="entry-link"
+      >
+        {linkLabel}
+      </a>
+      {suffix}
+    </>
+  ) : url ? (
+    <a
+      href={url}
+      target="_blank"
+      rel="noreferrer noopener nofollow"
+      class="entry-link"
+    >
+      {text}
+    </a>
+  ) : (
+    text
+  )
+}
